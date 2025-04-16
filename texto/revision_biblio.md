@@ -1,6 +1,10 @@
-# Preguntas disparadoras
-[@soria-perpinya_validation_2021] : tested 36 algorithms for key variables for 296 measurements and also explores the complementary of S2 and S3.
 
+# Papers general overview:
+
+[@soria-perpinya_validation_2021] : tested 36 algorithms for key variables for 296 measurements and also explores the complementary of S2 and S3.  
+[gholizadeh_comprehensive_2016] : Investigates commonly used approach and sensors in evaluating and quantifying 11 water quality parameters.  
+
+# scrachs
 the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water that has depth where 1% of incident light arrives, concentrating majority of photosynthetic activity. Transparency is correlated with red band (transparent + absorption ?);
 
 **Peak**: Spectral region where the light absorption achieve its highest value.   
@@ -9,8 +13,12 @@ the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water
 
 **Troughs**: Spectral regions where water absorption is less intense, like valley. Can indicate chemical components.
 
+## Importance (Justification) 
+Water monitoring is required for sustainable urban water supply. The level of treatment required for human and animal consumption, agriculture, and industry necessitates an understanding of quality of water sources. [gholizadeh_comprehensive_2016]
 
-**Remote Sensing**  
+In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters.
+ 
+## Remote Sensing  
 
 Water transparency is a key variable because the amount of light penetrating throughout the water column restricts the rate at which benthic algae, phytoplankton and macrophytes can assimilate energy for photosynthesis.
 
