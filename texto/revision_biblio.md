@@ -37,7 +37,8 @@ Water monitoring is required for sustainable urban water supply. The level of tr
 
 In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters. [@gholizadeh_comprehensive_2016]
 
-### Water clasification
+### Water clasification {#sec-water_class}
+
 According to @gholizadeh_comprehensive_2016:
 **Case 1:** Waters whose optical properties are determined primarily by phytoplankton and related colored dissolved organic matter (CDOM) and detritus degradation products;
 **Case 2:** Waters whose optical properties are significantly influenced by other constituents such as mineral particles, CDOM, or micro bubbles, whose concentrations do not co-variate with phytoplankton concentrations.
@@ -48,7 +49,9 @@ Water transparency is a key variable because the amount of light penetrating thr
 
 Water monitoring programs in compliance with water framework directive require a minimum frequency data. Remote sensing would serve to perform more frequent monitoring for key variables to determinate water ecological status.
 
-Remote Sensing techinique alo for Water Quality Monitoring is not sufficient and must be used in conjunction with traditional sampling methods and field survey [@gholizadeh_comprehensive_2016]. On the other hand, Remote Sensing has four advantages on water quality monitoring, when applied with traditional sampling:
+Remote Sensing technique make it possible to have spatial and temporal view of surface water quality parameters and more effectively and efficiently monitor the water bodies and quantify water quality issue [[@gholizadeh_comprehensive_2016].
+
+Remote Sensing technique used alone for Water Quality Monitoring is not sufficient and must be used in conjunction with traditional sampling methods and field survey [@gholizadeh_comprehensive_2016]. On the other hand, Remote Sensing has four advantages on water quality monitoring, when applied with traditional sampling:
 * It gives a synoptic view of the entire water body spatially and temporally;
 * It allows a synchronized view of vast areas;
 * Provides historical record and represents trends over time;
@@ -64,7 +67,7 @@ S2 study of surface dynamics of large number of water bodies (> spatial resoluti
 The S2 position and bandwidth are not optimal to detect most of the features (`peak`, `shoulder` and `troughts`) caused by water Optically Active Constituents, like cyanobacteria how, because of the phycocianin absorption is only detected in S3. 
 
 S3 > spectral and temporal resolution;
-> Is S3 the estimation of phytoplankton and cyanobacteria are, uncorrelated as different band set can be used. While S2 there will be always a correlation which does not correspond to actual correlation of variables in water bodies, as phytoplankton type (blue algal, differs than PC-rich cyanobacteria. [@soria-perpinya_validation_2021] ???
+> Is S3 the estimation of phytoplankton and cyanobacteria are, uncorrelated as different band set can be used. While S2 there will be always a correlation which does not correspond to actual correlation of variables in water bodies, as phytoplankton type (blue algal, differs than PC-rich cyanobacteria. [@soria-perpinya_validation_2021]  **???**
 Narrower bands of S3 facilitate finding specific features in water leaving radiance. [@soria-perpinya_validation_2021]
 S3 algorithms can serve as further validation of S2 when spatial consistency of both is studied.
 
@@ -86,6 +89,64 @@ Reservoir:
 
 ## Optically Active Constituents
 Interacts with electromagnetic energy and change the spectral of leaving energy, thus, can be measured using remote sensing. Non OAC, although has no effect on leaving irradiance, can be interpretable and inferable from those OAC with which they has strong correlation. [@gholizadeh_comprehensive_2016]
+
+Most commonly measured qualitantive parameters:
+
+|Variable|Abbreviation|OAC (yes/no) | description|
+|---|---|---|--- |
+|Chlorophyll a|Chl_a||
+|secchi disk depth|SDD||
+|temperature|Temp||
+|Colored Disolved Organic Matter|CDOM||
+|Total Organic Carbon|TOC||
+|Disolved Organic Carbon|DOC||
+|Total Suspended Matters|TSM||
+|Turbidity|Tur||
+|Sea Surface Salinity||
+|Total phosphorus|TP||
+|Chemical Oxigen Demand|COD||
+|Biochemical Oxigen Demand|BOD||
+|Eletrical Conductivity|EC||
+|Amonia Nitrogen|AN||
+: My Caption {#tbl-variables}
+
+There are several other important water quality to variables (*Ph*, *Nitrogen*, etc) which existing literature omit due to their weak optical characteristics and low **signal-noise ratio**.
+
+### Chlorophyll a {#sec-chl_a}
+Algal blooms are directly related to $Chl_{a}$ concentration. It is essential for photosynthesis. It is found in plants, algae and cyanobacterias [^1] . $Chl_{a}$ is the mayor water  trophic indicator, as it acts as a link between nutrient concentrations (phosphorus, for instance) and algal production. While reflecting in green wave length, it absorbs energy from violet-blue and orange-red wave lengths.  [@gholizadeh_comprehensive_2016];
+
+[^1]: buscar diferença.
+
+In case 1 waters (see @sec-water_class), the empirical empirical model adequately estimates $Chl_{a}$ concentrations, according to @gholizadeh_comprehensive_2016 [^2], while on case 2 water are more complex and requires advanced approaches and techniques as optical properties are determined also by composition of *Dissolved Organic (and inorganic) Matter*.  Thus, algorithms developed for case 1 are not applicable for case 2 waters.
+
+**Gelbstoff absorption** (caused by CDOM) *mask* [^3] blue-green region in casse 2 waters [@gholizadeh_comprehensive_2016].
+
+[^2]: **confirm if this came from bibliography review.**
+
+[^3]: Confirmar sentido de "mask". O que quer dizer?
+
+It is known that $Chl_{a}$ has strong absorption between 450-475 nm (blue region) and at 670 nm (red); It has a refelction peak at 550 nm (green) and 700 nm (NIR).
+
+As expected, *NDVI* ration have been used to retrieve $Chl_{a}$ [^4];
+[^4]: Confirmar se o que é mencionado se referee a realmente usar Diferença normalizada o um simple ratio.
+
+Thru a extensive literature review sugested that $Chl_{A}$ concentrations need wavelength near 675 and 700 nm.
+
+### Colored Dissolved Organic Matter (CDOM) {#sec-cdom}
+It is also known as *Gelbstoff and gilvin* absorption (?) is present in both fresh and saline waters. Together with [$Chl_{a}$](@sec-chl_a) dominate the water color. CDOM absorption can be several times and overlaps with the [$Chl_{a}$](#sec-chl_a) absorption [^5]. It can account for 50% of total absorption at 443 nm (blue wave length).
+[^5]: confirmar!
+
+the increase in CDOM concentration affects reflectance in the blue-green spectral region (below 500 nm) and its absorbance increases exponentially with decreasing wave length. This effect can complicate the use of $Chl_{a}$ and phytoplankton models.  [^6]
+[^6]: Investigar o por qué dessa complicação.
+
+* CDOM is important in ecology and carbon dynamics.
+* Can affect water Inherent Optical Properties (IOP);
+* Can be measured with the asumption that it co-variate with chlorophyll.
+* CDOM is refered as color and PCU color (Platinum-Cobalt_Units);
+* In recent study CDOM is reported as light absorption coefficients at given wave length (**???**);
+* Hyperspectral opresents advantadges for their broad spectrum of narrow bands. The challenge is to identify the band to use;
+* CDOM is reported as indicator for Dissolved Organic Carbon (DOC);
+
 
 **Como se los evalúa tradicionalmente?**  
 
