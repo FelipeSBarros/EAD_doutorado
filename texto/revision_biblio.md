@@ -31,17 +31,28 @@ the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water
 
 
 ## Importance (Justification) 
+Water quality monitoring is the process of determining the chemical, physical, and biological characteristics of water bodies and identifying the possible contamination source that degrade the water quality. [@gholizadeh_comprehensive_2016]
 
 Water monitoring is required for sustainable urban water supply. The level of treatment required for human and animal consumption, agriculture, and industry necessitates an understanding of quality of water sources. [@gholizadeh_comprehensive_2016]
 
 In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters. [@gholizadeh_comprehensive_2016]
 
+### Water clasification
+According to @gholizadeh_comprehensive_2016:
+**Case 1:** Waters whose optical properties are determined primarily by phytoplankton and related colored dissolved organic matter (CDOM) and detritus degradation products;
+**Case 2:** Waters whose optical properties are significantly influenced by other constituents such as mineral particles, CDOM, or micro bubbles, whose concentrations do not co-variate with phytoplankton concentrations.
 
 ## Remote Sensing  
 
 Water transparency is a key variable because the amount of light penetrating throughout the water column restricts the rate at which benthic algae, phytoplankton and macrophytes can assimilate energy for photosynthesis.
 
 Water monitoring programs in compliance with water framework directive require a minimum frequency data. Remote sensing would serve to perform more frequent monitoring for key variables to determinate water ecological status.
+
+Remote Sensing techinique alo for Water Quality Monitoring is not sufficient and must be used in conjunction with traditional sampling methods and field survey [@gholizadeh_comprehensive_2016]. On the other hand, Remote Sensing has four advantages on water quality monitoring, when applied with traditional sampling:
+* It gives a synoptic view of the entire water body spatially and temporally;
+* It allows a synchronized view of vast areas;
+* Provides historical record and represents trends over time;
+* Prioritizes sampling locations and field surveying times;
 
 Remote Sensing is a complementary tool for Water Quality monitoring, which differently from in-situ measurement, allows a broader spatial analysis and temporal scale [@soria-perpinya_validation_2021]. Main limitations of optical Remote Sensing are: it is limited to the uppermost part of the water column; it cannot provide information in cloudy days;
 When considering multi spectral sensors, which usually has better spatial resolution, the broad spectral range of its bands makes difficult to find the specific feature (peaks, shoulder, troughs caused by water's Optically Active Constituents (OAC) from the water leaving reflectance.
@@ -57,6 +68,8 @@ S3 > spectral and temporal resolution;
 Narrower bands of S3 facilitate finding specific features in water leaving radiance. [@soria-perpinya_validation_2021]
 S3 algorithms can serve as further validation of S2 when spatial consistency of both is studied.
 
+### SAR
+
 
 ## Study Area (Río Negro)
 
@@ -71,7 +84,8 @@ Reservoir:
 [@Agustina_Sismande]: Kaz90 is the depth on which 90% of incident light is absorbed by water and can be obtained by S2 `C2RCC` (Case 2 Regional Coastal Colour). Due to the low reflectivity of water, atmospheric correction in water quality remote sensing is a key process. S2-2A (sen3cor); 1C (TOA) using C3RCC version 2x for turbid water was used.
 
 
-**Qué son los Water Quality Parameters (WQP)?**  
+## Optically Active Constituents
+Interacts with electromagnetic energy and change the spectral of leaving energy, thus, can be measured using remote sensing. Non OAC, although has no effect on leaving irradiance, can be interpretable and inferable from those OAC with which they has strong correlation. [@gholizadeh_comprehensive_2016]
 
 **Como se los evalúa tradicionalmente?**  
 
