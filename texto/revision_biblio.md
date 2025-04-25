@@ -11,8 +11,11 @@ bibliography: Bibliography.bib
 
 [@soria-perpinya_validation_2021] : tested 36 algorithms for key variables for 296 measurements and also explores the complementary of S2 and S3.  
 [@gholizadeh_comprehensive_2016] : Investigates commonly used approach and sensors in evaluating and quantifying 11 water quality parameters.  
+[@Agustina_Sismande] : Análisis de la concentración de clorofila a en los embalses del Río Negro.
+
 
 # scrachs
+
 the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water that has depth where 1% of incident light arrives, concentrating majority of photosynthetic activity. Transparency is correlated with red band (transparent + absorption ?);
 
 **Peak**: Spectral region where the light absorption achieve its highest value.   
@@ -21,11 +24,19 @@ the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water
 
 **Troughs**: Spectral regions where water absorption is less intense, like valley. Can indicate chemical components.
 
+
+## Land use/land cover
+
+[@Agustina_Sismande]: Land use -> main trigger in contamination source. Agriculture's fertilizers runoff are the main nutrient source that contributes tot the eutrophication. While high Phosphorus and Nitrogen concentration promotes the eutrophication, the low water interchange rate also affects.
+
+
 ## Importance (Justification) 
+
 Water monitoring is required for sustainable urban water supply. The level of treatment required for human and animal consumption, agriculture, and industry necessitates an understanding of quality of water sources. [@gholizadeh_comprehensive_2016]
 
 In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters. [@gholizadeh_comprehensive_2016]
- 
+
+
 ## Remote Sensing  
 
 Water transparency is a key variable because the amount of light penetrating throughout the water column restricts the rate at which benthic algae, phytoplankton and macrophytes can assimilate energy for photosynthesis.
@@ -45,6 +56,20 @@ S3 > spectral and temporal resolution;
 > Is S3 the estimation of phytoplankton and cyanobacteria are, uncorrelated as different band set can be used. While S2 there will be always a correlation which does not correspond to actual correlation of variables in water bodies, as phytoplankton type (blue algal, differs than PC-rich cyanobacteria. [@soria-perpinya_validation_2021] ???
 Narrower bands of S3 facilitate finding specific features in water leaving radiance. [@soria-perpinya_validation_2021]
 S3 algorithms can serve as further validation of S2 when spatial consistency of both is studied.
+
+
+## Study Area (Río Negro)
+
+[@Agustina_Sismande]: Río Negro is a lotic system with the biggest water flow in Uruguay, with 930 m³/s and approximate length of 750 km. Its main land use are dedicated to agriculture (celulosis production). Its water is mainly used for human consumption, irrigation and industrial use (energy generation).
+Reservoir:
+  * Rincón del Bonete: 1,070 km²;
+  * Palmar: 320 km²;
+  * Baygorria: 100 km²;
+
+
+## Variables
+[@Agustina_Sismande]: Kaz90 is the depth on which 90% of incident light is absorbed by water and can be obtained by S2 `C2RCC` (Case 2 Regional Coastal Colour). Due to the low reflectivity of water, atmospheric correction in water quality remote sensing is a key process. S2-2A (sen3cor); 1C (TOA) using C3RCC version 2x for turbid water was used.
+
 
 **Qué son los Water Quality Parameters (WQP)?**  
 
