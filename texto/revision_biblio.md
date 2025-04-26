@@ -11,14 +11,14 @@ bibliography: Bibliography.bib
 
 [@soria-perpinya_validation_2021] : tested 36 algorithms for key variables for 296 measurements and also explores the complementary of S2 and S3.  
 [@gholizadeh_comprehensive_2016] : Investigates commonly used approach and sensors in evaluating and quantifying 11 water quality parameters.  
-[@Agustina_Sismande] : Análisis de la concentración de clorofila a en los embalses del Río Negro.
+[@Agustina_Sismande] : Análisis de la concentración de clorofila a en los embalses del Río Negro.  
 
 
 # scrachs
 
 the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water that has depth where 1% of incident light arrives, concentrating majority of photosynthetic activity. Transparency is correlated with red band (transparent + absorption ?);
 
-**Peak**: Spectral region where the light absorption achieve its highest value.   
+**Peak**: Spectral region where the light absorption achieve its highest value.
 
 **Shoulder**: spectral region where the light absorption is less intense then the peak region, but still being significant.
 
@@ -31,17 +31,20 @@ the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water
 
 
 ## Importance (Justification) 
+
 Water quality monitoring is the process of determining the chemical, physical, and biological characteristics of water bodies and identifying the possible contamination source that degrade the water quality. [@gholizadeh_comprehensive_2016]
 
 Water monitoring is required for sustainable urban water supply. The level of treatment required for human and animal consumption, agriculture, and industry necessitates an understanding of quality of water sources. [@gholizadeh_comprehensive_2016]
 
 In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters. [@gholizadeh_comprehensive_2016]
 
-### Water clasification {#sec-water_class}
+
+## Water classification {#sec-water_class}
 
 According to @gholizadeh_comprehensive_2016:
-**Case 1:** Waters whose optical properties are determined primarily by phytoplankton and related colored dissolved organic matter (CDOM) and detritus degradation products;
-**Case 2:** Waters whose optical properties are significantly influenced by other constituents such as mineral particles, CDOM, or micro bubbles, whose concentrations do not co-variate with phytoplankton concentrations.
+**Case 1:** Waters whose optical properties are determined primarily by phytoplankton and related colored dissolved organic matter [CDOM](#cdom) and detritus degradation products;
+**Case 2:** Waters whose optical properties are significantly influenced by other constituents such as mineral particles, [CDOM](#cdom), or micro bubbles, whose concentrations do not co-variate with phytoplankton concentrations.
+
 
 ## Remote Sensing  
 
@@ -71,6 +74,7 @@ S3 > spectral and temporal resolution;
 Narrower bands of S3 facilitate finding specific features in water leaving radiance. [@soria-perpinya_validation_2021]
 S3 algorithms can serve as further validation of S2 when spatial consistency of both is studied.
 
+
 ### SAR
 
 
@@ -84,13 +88,15 @@ Reservoir:
 
 
 ## Variables
+
 [@Agustina_Sismande]: Kaz90 is the depth on which 90% of incident light is absorbed by water and can be obtained by S2 `C2RCC` (Case 2 Regional Coastal Colour). Due to the low reflectivity of water, atmospheric correction in water quality remote sensing is a key process. S2-2A (sen3cor); 1C (TOA) using C3RCC version 2x for turbid water was used.
 
 
-## Optically Active Constituents
-Interacts with electromagnetic energy and change the spectral of leaving energy, thus, can be measured using remote sensing. Non OAC, although has no effect on leaving irradiance, can be interpretable and inferable from those OAC with which they has strong correlation. [@gholizadeh_comprehensive_2016]
+## Optically Active Constituents {#sec-oac}
 
-Most commonly measured qualitantive parameters:
+Interacts with electromagnetic energy and change the spectral of leaving energy, thus, can be measured using remote sensing. Non OAC, although has no effect on leaving radiance, can be intractable and inferable from those OAC with which they has strong correlation. [@gholizadeh_comprehensive_2016]
+
+Most commonly measured qualitative parameters:
 
 |Variable|Abbreviation|OAC (yes/no) | description|
 |---|---|---|--- |
@@ -112,7 +118,10 @@ Most commonly measured qualitantive parameters:
 
 There are several other important water quality to variables (*Ph*, *Nitrogen*, etc) which existing literature omit due to their weak optical characteristics and low **signal-noise ratio**.
 
+
 ### Chlorophyll a {#sec-chl_a}
+
+[@gholizadeh_comprehensive_2016] 
 Algal blooms are directly related to $Chl_{a}$ concentration. It is essential for photosynthesis. It is found in plants, algae and cyanobacterias [^1] . $Chl_{a}$ is the mayor water  trophic indicator, as it acts as a link between nutrient concentrations (phosphorus, for instance) and algal production. While reflecting in green wave length, it absorbs energy from violet-blue and orange-red wave lengths.  [@gholizadeh_comprehensive_2016];
 
 [^1]: buscar diferença.
@@ -130,9 +139,12 @@ It is known that $Chl_{a}$ has strong absorption between 450-475 nm (blue region
 As expected, *NDVI* ration have been used to retrieve $Chl_{a}$ [^4];
 [^4]: Confirmar se o que é mencionado se referee a realmente usar Diferença normalizada o um simple ratio.
 
-Thru a extensive literature review sugested that $Chl_{A}$ concentrations need wavelength near 675 and 700 nm.
+Thru a extensive literature review suggested that $Chl_{A}$ concentrations need wavelength near 675 and 700 nm.
+
 
 ### Colored Dissolved Organic Matter (CDOM) {#sec-cdom}
+
+[@gholizadeh_comprehensive_2016] 
 It is also known as *Gelbstoff and gilvin* absorption (?) is present in both fresh and saline waters. Together with [$Chl_{a}$](@sec-chl_a) dominate the water color. CDOM absorption can be several times and overlaps with the [$Chl_{a}$](#sec-chl_a) absorption [^5]. It can account for 50% of total absorption at 443 nm (blue wave length).
 [^5]: confirmar!
 
@@ -141,14 +153,78 @@ the increase in CDOM concentration affects reflectance in the blue-green spectra
 
 * CDOM is important in ecology and carbon dynamics.
 * Can affect water Inherent Optical Properties (IOP);
-* Can be measured with the asumption that it co-variate with chlorophyll.
-* CDOM is refered as color and PCU color (Platinum-Cobalt_Units);
+* Can be measured with the assumption that it co-variate with chlorophyll.
+* CDOM is referred as color and PCU color (Platinum-Cobalt_Units);
 * In recent study CDOM is reported as light absorption coefficients at given wave length (**???**);
-* Hyperspectral opresents advantadges for their broad spectrum of narrow bands. The challenge is to identify the band to use;
+* Hyperspectral presents advantages for their broad spectrum of narrow bands. The challenge is to identify the band to use;
 * CDOM is reported as indicator for Dissolved Organic Carbon (DOC);
 
 
-**Como se los evalúa tradicionalmente?**  
+### Secchi Disk Depth {#sec-sdd}
+
+[@gholizadeh_comprehensive_2016] 
+* Is an optical property of water of water strongly related to water constituents. It exhibits inverse correlation with [Total Suspended Solids](#tss). 
+* It can be used to study the relative **nutrient and solids loading** situations. 
+* Its measurements is based on light attenuation principles and is also relative to water [tubidity](#tur).
+* It has a significant correlation with atmospherically corrected satellite radiance.
+
+Is is considered as a reasonable indicator of trophic  conditions ( except in high colored lakes with low [$Chl_{a}$](#chla).
+
+*Lee et al.* (apud. @gholizadeh_comprehensive_2016) has developed a model that  relies only on the diffuse attenuation coefficient at a wavelength corresponding to the maximum transparency for such interpretation. The classic one relies on the beam attenuation coefficient [^7]
+[^7]: Confirmar o que é **difuse attenuation**, **beam attenuation**, em que comprimento de onda atuam e cáculo.
+
+
+#### Turbidity and Total Suspended Sediments {#sec-turtss}
+
+[@gholizadeh_comprehensive_2016] 
+* Are an optical water property which scatters and absorbs the light rather than transmit it in straight lines;
+* Absorption is controlled by [$Chl_{a}$](#chla) and [CDOM](#cdom) or **Particulate Matter**.
+* The more suspended particles, the more difficult for light to travel through the water and, therefore, the higher water turbidity.
+* **Interpretation of remotely Sensed data just based on the color not adequate and accurate.
+* It is linked to incoming sunlight that affects photosynthesis and also associated with [SDD](#sdd).
+* Seven bands can be used for [TSS](#tss) due to complex substances [^8]
+[^8]: . Confirmar essa frase; Qué bandas seriam?
+* An increase of Dissolved Inorganic Materials causes the **peak** reflectance to shift from **green** to **red** region. 
+
+
+### Total Phosphorus {#sec-tp}
+
+[@gholizadeh_comprehensive_2016] 
+* Consist of the measurement of all inorganic, organic and dissolved form of phosphorus whose increased quantity helps plants and algae to grow quickly.
+* Directly related to [$Chl_{a}$](#chla) concentration and indirectly to transparency ([SDD](#sdd)).
+* Is influenced by land use as agriculture by fertilizer-rich run off or effluent from waste water treatment plants.
+* Challenging measurement due to spatial heterogeneity of field samples.
+* Remote Sensing estimation of TP is based on its high correlation with (Optically Active Constituents)[#OAC].
+* It is closely related to phytoplankton, (turbidity)[tur] and (Total Suspended Matter)[#tsm] and (Secchi Disk Transparency)[^9].
+[^9]: Confirmar se é a mesma coisa: SDD e SDT. **Confirmar construção da frase com ands...**
+* Hyperspectral airborne or spaceborne provides more potential to detect TP.
+* Studies have shown that increasing TP results in tendency of increasing [$Chl_{A}$](#chla) may play a role as a proxy of phosphorus concentration.
+* [$Chl_{A}$](#chla) and [TSS](#tss) can be used as the potential theoretical parameters for indirect prediction of TP.
+* As phosphorus does not present optically Diagnostic, empirical modeling is considered the most applicable approach.
+* There is a time lag for phytoplankton to consume phosphorus, making relationship between TP and $Chl_{A}$ or SD [^10] complicated.
+[^10]: Confirmar o que seria o SD
+
+
+### Water Temperature {#sec-temp}
+
+[@gholizadeh_comprehensive_2016] 
+* Water temperature regulates physical and biological processes in water.
+* It influences the solubility and availability of chemicals.
+* Affects [Dissolved Oxigen](#do) concentration.
+* Is affected by seasonal variation (?)
+* Must be evaluated with care when the water is stratified: No relation can be expected between surface and underwater surface.
+
+### Dissolved Oxygen, Biochemical Oxygen Demand, Chemical Oxygen Demand {#sec-do} {#sec-bod} {#sec-cod}
+
+[@gholizadeh_comprehensive_2016] 
+* **Dissolved Oxygen (DO)** is crucial. It influences the living conditions. Can be affected by anthropogenic activities.
+* **Biochemical Oxygen Demand (BOD)** is an measure of the amount of oxygen that bacteria will consume under aerobic conditions while decomposing organic matters. By exploiting DO, the bacteria decompose these organic materials resulting in a reduction in the level of DO necessary for supporting aquatic life.
+* **Chemical Oxygen Demand (COD)** is the quantity of matter measured which chemical method that need to be oxygenized in water.
+* Any discharge of effluent with high **BOD** accelerated bacterial growth which, in turn, consumes and thus, reduces the oxygen levels.
+* No single identified and or recommended sensors can be used with high confidence to perform an appropriate model measure the reflectance of water from **DO**, **COD**, **BOD**. Several water quality models were developed to relate exponential, and logarithmic regression.
+
+
+**Como se los evalúa tradicionalmente?** 
 
 **Qué debilidades tiene el uso de la teledetcción en la evaluación de los WQP?**  
 
