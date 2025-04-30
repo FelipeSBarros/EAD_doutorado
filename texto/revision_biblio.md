@@ -12,6 +12,7 @@ bibliography: Bibliography.bib
 [@soria-perpinya_validation_2021] : tested 36 algorithms for key variables for 296 measurements and also explores the complementary of S2 and S3.  
 [@gholizadeh_comprehensive_2016] : Investigates commonly used approach and sensors in evaluating and quantifying 11 water quality parameters.  
 [@Agustina_Sismande] : Análisis de la concentración de clorofila a en los embalses del Río Negro.  
+[@batina_review_2023 ] : Introduces novel algorithms on optically active water quality parameters using remote sensing. Mentions ML/AI on analysing eight water quality parameters  in lake water ( [$Chl_{a}$](#ref-chla), [SDD](#ref-cdd), [CDOM](#ref-cdom), [TUR](#ref-tur), [EC](#ref-ec), [SS](#ref-ss), [TSM](#ref-tsm), [WT](#ref-temp) ) and also proposes combining hydrodynamic model with RS methods.
 
 
 # scratchs
@@ -24,6 +25,7 @@ the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water
 
 **Troughs**: Spectral regions where water absorption is less intense, like valley. Can indicate chemical components.
 
+To achieve the full potential, gholizadeh_comprehensive_2016 suggest that an open and effective dialogue should be build between scientists, policy makers, environmental managers and stakeholders.
 
 ## Land use/land cover
 
@@ -38,9 +40,17 @@ Water monitoring is required for sustainable urban water supply. The level of tr
 
 In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters. [@gholizadeh_comprehensive_2016]
 
+### Lakes and reservoirs
+Lakes are essential ecosystems covering lass than 1% of surface area and are essential component of water resources. **GOAL #6 SDGs**. They provide living space for species and are vital components of hydrological, nutrient and carbon cycles. [@batina_review_2023]
+
+Improving lake management techniques requires greater knowledge of the dynamic interactions between lake depth and social and environmental variables.
 
 ## Water Quality Assessment
- *More & Gordon (apud. @gholizadeh_comprehensive_2016)* distinguished three different approaches for estimating concentration of water quality parameters:
+According to  @batina_review_2023, water quality encompasses the physical, chemical, and biological attributes of water to satisfy diverse water applications such as drinking, irrigation/ recreational,...
+
+Water quality has been assessed by in-situ sampling methods. Although it is an accurate approach it is unable to to readily determine spatial or temporal variability in Water Quality because sampling points are not appropriately distributed. @batina_review_2023.
+
+*More & Gordon (apud. @gholizadeh_comprehensive_2016)* distinguished three different approaches for estimating concentration of water quality parameters:
  
  1. Empirical: Seeks statistical relationship between spectral bands or band combinations and the in-situ measured water parameter.
  2. Semi-empirical: Utilize the physical and spectral information to develop the algorithms, which are then correlated to the measured constituents (**parameter?**).
@@ -56,6 +66,15 @@ According to @gholizadeh_comprehensive_2016:
 **Case 2:** Waters whose optical properties are significantly influenced by other constituents such as mineral particles, [CDOM](#cdom), or micro bubbles, whose concentrations do not co-variate with phytoplankton concentrations.
 
 
+### Eutrophication  
+Eutrophication is a severe problem for inland waters. Shallow lakes are the most common lake type  in the world, according to @batina_review_2023. They are sensitive to eutrophication, have higher risk of water quality issues, and are more. receptive to acquiring huge amounts of nutrients due to strong water-sediment interaction, sedimentation, export and sedimentary exchanges.
+
+> nutrient availability (F y P).: > Algae activity and Algae bloom .: > decomposition > oxygen consumption.
+
+The increase of chlorophyll and algal biomass are symptomatic signs of eutrophication, included in the *Normative Definitions of Ecological Status Classes* [@soria-perpinya_validation_2021] 
+Chlorophyll a is a proxy of phytoplankton biomass (term referring to all aquatic environmental vegetation organisms), which includes cyanobacteria: photosynthetic organism responsible for toxins that affects water consumption. Phycocianin is the blue-green pigment (PC) responsible for photosynthesis, which absorbs at 620 nm (It is said that S3 can be measured while in S2, no [@soria-perpinya_validation_2021]. 
+
+
 ### Remote Sensing  
 
 Water transparency is a key variable because the amount of light penetrating throughout the water column restricts the rate at which benthic algae, phytoplankton and macrophytes can assimilate energy for photosynthesis.
@@ -63,6 +82,8 @@ Water transparency is a key variable because the amount of light penetrating thr
 Water monitoring programs in compliance with water framework directive require a minimum frequency data. Remote sensing would serve to perform more frequent monitoring for key variables to determinate water ecological status.
 
 Remote Sensing technique make it possible to have spatial and temporal view of surface water quality parameters and more effectively and efficiently monitor the water bodies and quantify water quality issue [@gholizadeh_comprehensive_2016].
+
+RS is cost-effective and time efficient for different levels(scales). Is essential for full assessment and management of Water Quality and may be further enhanced via interdisciplinary cooperation. @batina_review_2023
 
 Remote Sensing technique used alone for Water Quality Monitoring is not sufficient and must be used in conjunction with traditional sampling methods and field survey [@gholizadeh_comprehensive_2016]. On the other hand, Remote Sensing has four advantages on water quality monitoring, when applied with traditional sampling:
 * It gives a synoptic view of the entire water body spatially and temporally;
@@ -264,19 +285,6 @@ Are water components that interacts and change water optical property by scatter
 **Cuales serían "Optically active? y cuales no serían?**  
 
 **Qué son y como se diferencian los parametros de medición de los WQP "physical", "chemical" y/o "biological"?**  
-
-**Qué es la eutrophication?**  
-
-> nutrient availability (F y P).: > Algae activity and Algae bloom .: > decomposition > oxygen consumption.
-
-The increase of chlorophyll and algal biomass are symptomatic signs of eutrophication, included in the *Normative Definitions of Ecological Status Classes* [@soria-perpinya_validation_2021] 
-Chlorophyll a is a proxy of phytoplankton biomass (term referring to all aquatic environmental vegetation organisms), which includes cyanobacteria: photosynthetic organism responsible for toxins that affects water consumption. Phycocianin is the blue-green pigment (PC) responsible for photosynthesis, which absorbs at 620 nm (It is said that S3 can be measured while in S2, no [@soria-perpinya_validation_2021]. 
-
-**Qué actividades pueden favorecer su condición (eutrophication)?**  
-
-
-**Qué Parámetros son correlacionados entre sí?**  
-
 
 **OTHER**
 
