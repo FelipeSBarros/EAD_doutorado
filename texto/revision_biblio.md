@@ -14,7 +14,7 @@ bibliography: Bibliography.bib
 [@Agustina_Sismande] : Análisis de la concentración de clorofila a en los embalses del Río Negro.  
 
 
-# scrachs
+# scratchs
 
 the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water that has depth where 1% of incident light arrives, concentrating majority of photosynthetic activity. Transparency is correlated with red band (transparent + absorption ?);
 
@@ -39,20 +39,30 @@ Water monitoring is required for sustainable urban water supply. The level of tr
 In-situ measurement of physical, chemical and biological Water Quality Parameters is costly, time consuming and labor intensive despite of having high accuracy. Thus it is not feasible for regional and simultaneous measurement at regional scale. Also, point sampling, as it is also known,  are not able to identify the spatial nor temporal variation of measured parameters. [@gholizadeh_comprehensive_2016]
 
 
-## Water classification {#sec-water_class}
+## Water Quality Assessment
+ *More & Gordon (apud. @gholizadeh_comprehensive_2016)* distinguished three different approaches for estimating concentration of water quality parameters:
+ 
+ 1. Empirical: Seeks statistical relationship between spectral bands or band combinations and the in-situ measured water parameter.
+ 2. Semi-empirical: Utilize the physical and spectral information to develop the algorithms, which are then correlated to the measured constituents (**parameter?**).
+ 3. Analytical (physical @gholizadeh_comprehensive_2016): Determine the constituents concentration by modeling the reflectance of surface water and utilizing the inherent and apparent optical characteristics. However, the semi-analytical approach use simplified analytical model.
+ 
+ > The empirical approaches are easy to implement and requires less math skills. [gholizadeh_comprehensive_2016]
+ 
+ 
+### Classification {#sec-water_class}
 
 According to @gholizadeh_comprehensive_2016:
 **Case 1:** Waters whose optical properties are determined primarily by phytoplankton and related colored dissolved organic matter [CDOM](#cdom) and detritus degradation products;
 **Case 2:** Waters whose optical properties are significantly influenced by other constituents such as mineral particles, [CDOM](#cdom), or micro bubbles, whose concentrations do not co-variate with phytoplankton concentrations.
 
 
-## Remote Sensing  
+### Remote Sensing  
 
 Water transparency is a key variable because the amount of light penetrating throughout the water column restricts the rate at which benthic algae, phytoplankton and macrophytes can assimilate energy for photosynthesis.
 
 Water monitoring programs in compliance with water framework directive require a minimum frequency data. Remote sensing would serve to perform more frequent monitoring for key variables to determinate water ecological status.
 
-Remote Sensing technique make it possible to have spatial and temporal view of surface water quality parameters and more effectively and efficiently monitor the water bodies and quantify water quality issue [[@gholizadeh_comprehensive_2016].
+Remote Sensing technique make it possible to have spatial and temporal view of surface water quality parameters and more effectively and efficiently monitor the water bodies and quantify water quality issue [@gholizadeh_comprehensive_2016].
 
 Remote Sensing technique used alone for Water Quality Monitoring is not sufficient and must be used in conjunction with traditional sampling methods and field survey [@gholizadeh_comprehensive_2016]. On the other hand, Remote Sensing has four advantages on water quality monitoring, when applied with traditional sampling:
 * It gives a synoptic view of the entire water body spatially and temporally;
@@ -60,10 +70,9 @@ Remote Sensing technique used alone for Water Quality Monitoring is not sufficie
 * Provides historical record and represents trends over time;
 * Prioritizes sampling locations and field surveying times;
 
-Remote Sensing is a complementary tool for Water Quality monitoring, which differently from in-situ measurement, allows a broader spatial analysis and temporal scale [@soria-perpinya_validation_2021]. Main limitations of optical Remote Sensing are: it is limited to the uppermost part of the water column; it cannot provide information in cloudy days;
-When considering multi spectral sensors, which usually has better spatial resolution, the broad spectral range of its bands makes difficult to find the specific feature (peaks, shoulder, troughs caused by water's Optically Active Constituents (OAC) from the water leaving reflectance.
+Remote Sensing is a complementary tool for Water Quality monitoring, which differently from in-situ measurement, allows a broader spatial analysis and temporal scale [@soria-perpinya_validation_2021]. 
 
-Hyper spectral sensors like, Sentinel 3 (S3), which is specifically designed  for water studies and have Ocean and Land Color Instruments (OLCI) with narrower bands specifically positioned for some of the OAC, despite of having a coarse spatial resolution (300 meters);
+specifically designed  for water studies and have Ocean and Land Color Instruments (OLCI) with narrower bands specifically positioned for some of the OAC, despite of having a coarse spatial resolution (300 meters);
 
 S2 study of surface dynamics of large number of water bodies (> spatial resolution but less accurate. [@soria-perpinya_validation_2021]
 
@@ -74,8 +83,24 @@ S3 > spectral and temporal resolution;
 Narrower bands of S3 facilitate finding specific features in water leaving radiance. [@soria-perpinya_validation_2021]
 S3 algorithms can serve as further validation of S2 when spatial consistency of both is studied.
 
+#### Remote Sensing limitations 
+Main limitations of optical Remote Sensing are: it is limited to the uppermost part of the water column; it cannot provide information in cloudy days;[^11]
 
-### SAR
+When considering multi spectral sensors, which usually has better spatial resolution, the broad spectral range of its bands makes difficult to find the specific feature (peaks, shoulder, troughs caused by water's Optically Active Constituents (OAC) from the water leaving reflectance. [^11]
+
+Hyper spectral sensors like, Sentinel 3 (S3), which is [^11] 
+[^11]: Confirmar si info is from @soria-perpinya_validation_2021 o @gholizadeh_comprehensive_2016.
+
+@gholizadeh_comprehensive_2016 mentions as Remote Sensing limitations:
+
+* Developed models from RS requires adequate calibration and validation using in-situ measurements;
+* Can be used only in absence of clouds;
+* Spatial, temporal, and spectral resolution limitations can confine the application of RS to assess water quality;
+* The atmospheric interference also restricts the optical signals coming from water bodies.
+* Most studies focuses on optically active variables: [$Chl_{a}$](#ref-chla), [CDOM](#ref-cdom), [TSS](ref-tss) and [TUR](#ref-tur).
+
+
+#### SAR
 
 
 ## Study Area (Río Negro)
@@ -222,6 +247,8 @@ Is is considered as a reasonable indicator of trophic  conditions ( except in hi
 * **Chemical Oxygen Demand (COD)** is the quantity of matter measured which chemical method that need to be oxygenized in water.
 * Any discharge of effluent with high **BOD** accelerated bacterial growth which, in turn, consumes and thus, reduces the oxygen levels.
 * No single identified and or recommended sensors can be used with high confidence to perform an appropriate model measure the reflectance of water from **DO**, **COD**, **BOD**. Several water quality models were developed to relate exponential, and logarithmic regression.
+
+According to @gholizadeh_comprehensive_2016, there is no single identified or recommended sensor to be used to perform water reflectance model to measure DO, COD, BOD.
 
 
 **Como se los evalúa tradicionalmente?** 
