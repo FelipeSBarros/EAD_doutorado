@@ -10,9 +10,9 @@ bibliography: Bibliography.bib
 # Papers general overview:
 
 [@soria-perpinya_validation_2021] : tested 36 algorithms for key variables for 296 measurements and also explores the complementary of S2 and S3.  
-[@gholizadeh_comprehensive_2016] : Investigates commonly used approach and sensors in evaluating and quantifying 11 water quality parameters.  
+[@gholizadeh_comprehensive_2016] : Investigates commonly used approach and sensors in evaluating and quantifying 11 Water Quality Parameters.  
 [@Agustina_Sismande] : Análisis de la concentración de clorofila a en los embalses del Río Negro.  
-[@batina_review_2023 ] : Introduces novel algorithms on optically active water quality parameters using remote sensing. Mentions ML/AI on analysing eight water quality parameters  in lake water ( [$Chl_{a}$](#ref-chla), [SDD](#ref-cdd), [CDOM](#ref-cdom), [TUR](#ref-tur), [EC](#ref-ec), [SS](#ref-ss), [TSM](#ref-tsm), [WT](#ref-temp) ) and also proposes combining hydrodynamic model with RS methods.
+[@batina_review_2023 ] : Introduces novel algorithms on optically active Water Quality Parameters using remote sensing. Mentions ML/AI on analysing eight Water Quality Parameters  in lake water ( [$Chl_{a}$](#ref-chla), [SDD](#ref-cdd), [CDOM](#ref-cdom), [TUR](#ref-tur), [EC](#ref-ec), [SS](#ref-ss), [TSM](#ref-tsm), [WT](#ref-temp) ) and also proposes combining hydrodynamic model with RS methods.  
 
 
 # scratchs
@@ -25,7 +25,7 @@ the Secci Disk Depth (SDD) can relate to the eutrophic zone (the layer  of water
 
 **Troughs**: Spectral regions where water absorption is less intense, like valley. Can indicate chemical components.
 
-To achieve the full potential, gholizadeh_comprehensive_2016 suggest that an open and effective dialogue should be build between scientists, policy makers, environmental managers and stakeholders.
+To achieve the full potential, @gholizadeh_comprehensive_2016 suggest that an open and effective dialogue should be build between scientists, policy makers, environmental managers and stakeholders.
 
 ## Land use/land cover
 
@@ -45,19 +45,39 @@ Lakes are essential ecosystems covering lass than 1% of surface area and are ess
 
 Improving lake management techniques requires greater knowledge of the dynamic interactions between lake depth and social and environmental variables.
 
+Reservoirs alongside with lakes are often studied due to their comparable Water Quality complexity. [@batina_review_2023]
+
 ## Water Quality Assessment
 According to  @batina_review_2023, water quality encompasses the physical, chemical, and biological attributes of water to satisfy diverse water applications such as drinking, irrigation/ recreational,...
 
 Water quality has been assessed by in-situ sampling methods. Although it is an accurate approach it is unable to to readily determine spatial or temporal variability in Water Quality because sampling points are not appropriately distributed. @batina_review_2023.
 
-*More & Gordon (apud. @gholizadeh_comprehensive_2016)* distinguished three different approaches for estimating concentration of water quality parameters:
+*More & Gordon (apud. @gholizadeh_comprehensive_2016)* distinguished three different approaches for estimating concentration of Water Quality Parameters, while @batina_review_2023 suggest five:
  
  1. Empirical: Seeks statistical relationship between spectral bands or band combinations and the in-situ measured water parameter.
+ According to @batina_review_2023, computes statistical correlations between in-situ Water Quality Parameters concentrations and spectral responses to derive distinctive spectral sign (**assinatura espectral**). Empirical methods includes linear regression, single-channel, channel-combination, Principal Component Analysis (PCA),and others, to create **inverse model** without complex parameters. Thus, although the evidentiate relationship, **they lack physical mechanisms and multi-temporal validity**.: This means that most of the time it is a limited application across spatial and temporal domains. Will always require in-situ data. Optically inhomogeneous water bodies and atmospheric conditions make parametrization difficult. These methods are more accurate then spectral and bio-optical models because the take into account the water body specific properties. It is easier to implement but may not work for complex compositions of Water Quality Parameters, such as phytoplankton, [TSM](#sec-tsm) and [CDOM](#sec-cdom) as they do not have unique absorption features and greatly increase uncertainty.
  2. Semi-empirical: Utilize the physical and spectral information to develop the algorithms, which are then correlated to the measured constituents (**parameter?**).
- 3. Analytical (physical @gholizadeh_comprehensive_2016): Determine the constituents concentration by modeling the reflectance of surface water and utilizing the inherent and apparent optical characteristics. However, the semi-analytical approach use simplified analytical model.
+ According to @batina_review_2023: Combine empirical and analytical methods. It correlates Water Quality Parameters in-situ measurements with RS data combining statistical analysis with water spectral theory. They do not model the inherent optical properties of a water bodies like semi-analytical models. Instead, they improve the parameters spectral properties and reduce optical parameters noise. Physically based semi-empirical models are more generalizable than completely empirical ones, as they measure absorption characteristics and scattering peaks at certain wave length, they can only be used with sensors with properly positioned band centers and enough spectral resolution. The large amount of in-situ measurement data limits its temporal and spatial applicability.
+ 3. Semi Analytical (@batina_review_2023): Theoretical analyses of spectral data. Simplify analytical method. Most of them are three-band which identify the optimal the three-band combinations related to the absorption coefficient and quantifies the correlation between the coefficient and Water Quality Parameter presence/concentration. To do so, Radiance spectra is cataloged in look-up tables (huge library of such spectra with known parameters concentration, inherent optical properties, bathymetry and bottom characteristics. The closest match is calculated using spectral signature of the image and database entries. Model development is difficult and requires knowledge of atmospheric composition, bottom reflectance, and other details. Are used to retrieve mainly [Optically Active Parameters](#sec-oac).
+ 4. Analytical (physical @gholizadeh_comprehensive_2016): 
+ Determine the constituents concentration by modeling the reflectance of surface water and utilizing the inherent and apparent optical characteristics. However, the semi-analytical approach use simplified analytical model.
+ According to @batina_review_2023, this approach link Water Quality Parameters with water-leaving radiance using radiation transmission theory. Can simultaneeosly identify all water parameters using well-established parameters properties and large in-ssitu data. Portability is good, but requires a highly accurate measuring instrument, high application cost, and challenges to widespread adoption. Thus it is a dufficult method and rarely used for all Water Quality Parameters.
+ 5. Machine Learning and Artificial Inteligence (@batina_review_2023): Are caracetrized by computational complexity and nonlinear relashioship management, event though they are empirical.
+ According to @batina_review_2023 those methods are limited to the data sued to train the model, just like empirical methods. It uses interactive method learning to minimize errors and optimize model fit, unlike empirical methods. It is needed to separate training and testing dataset with representative samples to avoid over-fitting. Can generate models that capture complex and nonlinear relationships between Water Quality Parameters and reflectance when given appropriate inputs. Those methods may be divided in two groups:
+ 5.1. Traditional Machine Learning:
+ 5.2. Deep learning based methods: CNN models classify hyperspectral images best because they capture extensive spatial and spectral information. Only works if they have a lot of training data. It poses challenges to the transferability. The solutions that can't be explained can lead to wrong outputs or problems that aren't well-posed. Deep learning outperforms manu other remote sensing methods at estimating Water Quality Parameters.
  
  > The empirical approaches are easy to implement and requires less math skills. [gholizadeh_comprehensive_2016]
  
+ Empirical and analytical differs in how they develop models based on Water Quality concentration and reflectance. [@batina_review_2023]
+ 
+ Usually, a Water Quality model is created for a specific water body, serving as indicator of Water pollution.
+
+
+### Traditional Water Quality Parameters Assessment
+
+Traditional method for retrieving Water Quality is by in-situ measurement.
+
  
 ### Classification {#sec-water_class}
 
@@ -81,9 +101,11 @@ Water transparency is a key variable because the amount of light penetrating thr
 
 Water monitoring programs in compliance with water framework directive require a minimum frequency data. Remote sensing would serve to perform more frequent monitoring for key variables to determinate water ecological status.
 
-Remote Sensing technique make it possible to have spatial and temporal view of surface water quality parameters and more effectively and efficiently monitor the water bodies and quantify water quality issue [@gholizadeh_comprehensive_2016].
+Remote Sensing technique make it possible to have spatial and temporal view of surface Water Quality Parameters and more effectively and efficiently monitor the water bodies and quantify water quality issue [@gholizadeh_comprehensive_2016].
 
 RS is cost-effective and time efficient for different levels(scales). Is essential for full assessment and management of Water Quality and may be further enhanced via interdisciplinary cooperation. @batina_review_2023
+
+RS has been used since the seventies to assess Water Quality Parameters [@batina_review_2023] and the free availability of imagery with LANDSAT project led to an increase in scientific publications in different scope and domains using RS [@batina_review_2023]. Lately, with increase in RS data together with in-situ measurements on Water Quality Parameters for model calibration and validations has increased by modern databases offered by Governments, Non-Governments Organizations (NGO's), Scholars [@batina_review_2023, @soria-perpinya_validation_2021].
 
 Remote Sensing technique used alone for Water Quality Monitoring is not sufficient and must be used in conjunction with traditional sampling methods and field survey [@gholizadeh_comprehensive_2016]. On the other hand, Remote Sensing has four advantages on water quality monitoring, when applied with traditional sampling:
 * It gives a synoptic view of the entire water body spatially and temporally;
@@ -120,6 +142,8 @@ Hyper spectral sensors like, Sentinel 3 (S3), which is [^11]
 * The atmospheric interference also restricts the optical signals coming from water bodies.
 * Most studies focuses on optically active variables: [$Chl_{a}$](#ref-chla), [CDOM](#ref-cdom), [TSS](ref-tss) and [TUR](#ref-tur).
 
+Satellite-based models have temporal limitations due to their reliance on short-term in-situ data for their design.
+
 
 #### SAR
 
@@ -137,10 +161,15 @@ Reservoir:
 
 [@Agustina_Sismande]: Kaz90 is the depth on which 90% of incident light is absorbed by water and can be obtained by S2 `C2RCC` (Case 2 Regional Coastal Colour). Due to the low reflectivity of water, atmospheric correction in water quality remote sensing is a key process. S2-2A (sen3cor); 1C (TOA) using C3RCC version 2x for turbid water was used.
 
+@batina_review_2023 divide the Water Quality Parameter [^12]:
+1. Physical: [SDD](#sec-sdd), [TSM](#sec-tsm), [CDOM](#sec=cdom);
+2. Chemical: [DO, COB, BOD, TOC](#sec-cod);
+3. Biological: [$Chl_{a}$](#sec-chla);
+[^12]: Confirm if **indicators** can be used as **parameters** and **constituents**
 
 ## Optically Active Constituents {#sec-oac}
 
-Interacts with electromagnetic energy and change the spectral of leaving energy, thus, can be measured using remote sensing. Non OAC, although has no effect on leaving radiance, can be intractable and inferable from those OAC with which they has strong correlation. [@gholizadeh_comprehensive_2016]
+Interacts with electromagnetic energy and change the spectral of leaving energy by absorption and scattering process, thus, can be measured using remote sensing. Non OAC, although has no effect on leaving radiance, can be intractable and inferable from those OAC with which they has strong correlation. [@gholizadeh_comprehensive_2016, @batina_review_2023]
 
 Most commonly measured qualitative parameters:
 
@@ -163,6 +192,10 @@ Most commonly measured qualitative parameters:
 : My Caption {#tbl-variables}
 
 There are several other important water quality to variables (*Ph*, *Nitrogen*, etc) which existing literature omit due to their weak optical characteristics and low **signal-noise ratio**.
+
+### Water Quality Parameters assessment by RS
+
+Using in-situ data and equivalent satellite imagery, a model is established (considering the empirical approach). This means that for each [OAC](#sec-oac) its presence and concentration are identified and statistically correlated with spectral response. By establishing such model, then a larger area can be monitored allowing, also, a monitoring project on a longer based time. When dealing with non-[OAC](#sec-oac), there is a necessity of non-[OAC](#sec-oac) be correlated with any other [OAC](#sec-oac) parameters so a correlation can be established. @batina_review_2023, claims those models as *Bio-optical models* as it is expected that those models can describe and predicts the water's bio-optical state (in the caso of [OAC](#sec-oac) Parameters.
 
 
 ### Chlorophyll a {#sec-chl_a}
@@ -272,10 +305,6 @@ Is is considered as a reasonable indicator of trophic  conditions ( except in hi
 According to @gholizadeh_comprehensive_2016, there is no single identified or recommended sensor to be used to perform water reflectance model to measure DO, COD, BOD.
 
 
-**Como se los evalúa tradicionalmente?** 
-
-**Qué debilidades tiene el uso de la teledetcción en la evaluación de los WQP?**  
-
 **Qué serían Water Optically Constituent?**  
 
 Are water components that interacts and change water optical property by scattering, reflecting and absorbing light. Example of Water Active Components are: phytoplankton, sediments, among other. 
@@ -284,7 +313,7 @@ Are water components that interacts and change water optical property by scatter
 
 **Cuales serían "Optically active? y cuales no serían?**  
 
-**Qué son y como se diferencian los parametros de medición de los WQP "physical", "chemical" y/o "biological"?**  
+**Qué son y como se diferencian los parametros de medición de los Water Quality Parameters "physical", "chemical" y/o "biological"?**  
 
 **OTHER**
 
